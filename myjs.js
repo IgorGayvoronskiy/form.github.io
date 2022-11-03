@@ -16,7 +16,7 @@ let b = document.getElementById("b1");
         }
         history.pushState(stateObj, 'page 2', 'bar.html');
         window.addEventListener('popstate', function(){
-            PopUpShow()
+            PopUpShow();
         })
 });
 
