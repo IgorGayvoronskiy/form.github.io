@@ -8,8 +8,7 @@ function PopUpShow(){
     $("#popup1").show();
 }
 
-window.addEventListener('DOMContentLoaded', function (event) {
-    let b = document.getElementById("b1");
+let b = document.getElementById("b1");
     b.addEventListener("click", function(){
         let stateObj = {
             index: "bar",
@@ -18,7 +17,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
         window.addEventListener('popstate', function(){
             PopUpShow();
         })
-    });
 });
 
 // b.addEventListener('click', () => {
