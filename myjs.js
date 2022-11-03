@@ -8,15 +8,17 @@ function PopUpShow(){
     $("#popup1").show();
 }
 
+window.addEventListener('popstate', function(){
+    PopUpShow();
+})
+
 let b = document.getElementById("b1");
     b.addEventListener("click", function(){
         let stateObj = {
             index: "bar",
         }
         history.pushState(null, 'page 2', 'bar.html');
-        window.addEventListener('popstate', function(){
-            PopUpShow();
-        })
+        PopUpShow();
 });
 
 // b.addEventListener('click', () => {
