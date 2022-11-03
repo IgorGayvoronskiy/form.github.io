@@ -15,7 +15,7 @@ let b = document.getElementById("b1");
             index: "bar",
         }
         history.pushState(stateObj, 'page 2', 'bar.html');
-        PopUpShow()
+        PopUpShow();
 });
 
 // b.addEventListener('click', () => {
