@@ -8,9 +8,6 @@ function PopUpShow(){
     $("#popup1").show();
 }
 
-window.addEventListener('popstate', function(){
-    PopUpShow();
-})
 
 let b = document.getElementById("b1");
     b.addEventListener("click", function(){
