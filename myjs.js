@@ -13,7 +13,7 @@ let b = document.getElementById("b1");
         let stateObj = {
             index: "bar",
         }
-        history.pushState(null, 'page 2', 'bar.html');
+        history.pushState(stateObj, 'page 2', 'bar.html');
         PopUpShow();
 });
 
