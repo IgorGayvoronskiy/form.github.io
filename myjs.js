@@ -9,15 +9,15 @@ function PopUpShow(){
 }
 
 
-let b = document.getElementById("b1");
-    b.addEventListener("click", function(){
-        let stateObj = {
-            index: "bar",
-        }
-        history.pushState(null, 'page 2', 'bar.html');
-        window.addEventListener('popstate', function(){
-            PopUpShow();
-        })
+let b = document.getElementsByName("b1");
+b.addEventListener("click", function(){
+    let stateObj = {
+        index: "bar",
+    }
+    history.pushState(null, 'page 2', 'bar.html');
+    window.addEventListener('popstate', function(){
+        PopUpShow();
+    })
 });
 
 // b.addEventListener('click', () => {
