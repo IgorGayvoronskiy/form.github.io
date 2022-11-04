@@ -15,6 +15,7 @@ if(b) {
         let stateObj = {
             index: "bar",
         }
+        console.log("hi");
         history.pushState(null, 'page 2', 'bar.html');
         window.addEventListener('popstate', function(){
             PopUpShow();
