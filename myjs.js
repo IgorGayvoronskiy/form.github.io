@@ -9,7 +9,7 @@ function PopUpShow(){
 }
 
 
-let b = document.getElementsByName("b1");
+let b = document.getElementById("b1");
 b.addEventListener("click", function(){
     let stateObj = {
         index: "bar",
