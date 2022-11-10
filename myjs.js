@@ -15,7 +15,7 @@ function PopUpShow(){
 }
 
 window.addEventListener('popstate', function(){
-    PopUpHide();
+     PopUpHide();
 })
 
 // let b = document.getElementById("b1");
