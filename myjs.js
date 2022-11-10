@@ -14,6 +14,9 @@ function PopUpShow(){
     $("#popup1").show();
 }
 
+window.addEventListener('popstate', function(){
+    PopUpHide();
+})
 
 // let b = document.getElementById("b1");
 // if(b) {
