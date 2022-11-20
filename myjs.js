@@ -1,3 +1,25 @@
+$(function(){
+    $(".ajaxForm").submit(function(e){
+        e.preventDefault();
+        var href = $(this).attr("action");
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: href,
+            data: $(this).serialize(),
+            success: function(response){
+                if(response.status == "success"){
+                    alert("Отправка совершена успешно!");
+                }
+                else{
+                    alert("Ошибка: " + response.message);
+                }
+            }
+        });
+    });
+});
+
+
 $(document).ready(function(){
     //Скрыть PopUp при загрузке страницы    
     PopUpHide();
@@ -17,29 +39,6 @@ function PopUpShow(){
 window.addEventListener('popstate', function(){
      PopUpHide();
 })
-
-// let b = document.getElementById("b1");
-// if(b) {
-//     b.addEventListener("click", function(){
-//         let stateObj = {
-//             index: "bar",
-//         }
-//         console.log("hi");
-//         history.pushState(null, 'page 2', 'bar.html');
-//         window.addEventListener('popstate', function(){
-//             PopUpShow();
-//         })
-//     });
-// }
-
-// b.addEventListener('click', () => {
-//     window.history.pushState(
-//       {},
-//       'form',
-//       'form.html'
-//     )
-//     PopUpShow()
-//   })
 
 //Функция скрытия PopUp
 function PopUpHide(){
