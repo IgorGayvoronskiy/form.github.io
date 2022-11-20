@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>"Форма"</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./jquery-3.4.1.min.js"></script>
-    <script src="./myjs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="b-container">
         <button type="submit" onclick="return PopUpShow()">Показать форму</button>
     </div>
-<div class="b-popup" id="popup1">
-    <div class="b-popup-content">
-        <form method="POST" action="https://formcarry.com/s/V13JkWi_i">
-            <div>
-                Имя:<input type="text" name="name" required="required">
-            </div>
-            <div>
-                email:<input type="email" name="email" required="required">
-            </div>
-            <div>
-                Сообщение:<textarea name="message" required="required"></textarea>
-            </div>
-            <div>
-                <input type="checkbox" required="required">Я согласен с политикой обработки данных
-            </div>
-            <div>
-                <button type="submit">Отправить</button>
-            </div>
-        </form>
+    <div class="b-popup" id="popup1">
+        <div class="b-popup-content">
+            <form class="ajaxForm" action="https://formcarry.com/s/V13JkWi_i" accept-charset="UTF-8">
+                <div>
+                    Имя:<input type="text" name="name" required="required">
+                </div>
+                <div>
+                    email:<input type="email" name="email" required="required">
+                </div>
+                <div>
+                    Сообщение:<textarea name="message" required="required"></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" required="required">Я согласен с политикой обработки данных
+                </div>
+                <div>
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
+    <script src="./myjs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </body>
